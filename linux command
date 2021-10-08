@@ -1,0 +1,104 @@
+exam@debian:~$ mkdir Sales
+exam@debian:~$ cd Sales
+exam@debian:~/Sales$ mkdir Location1 Location2 Location3
+exam@debian:~/Sales$ cd Location1
+exam@debian:~/Sales/Location1$ cat > sales1
+hello
+how are you
+exam@debian:~/Sales/Location1$ cat > sales
+Im fine
+exam@debian:~/Sales/Location1$ cat > sale3
+Its a sample code
+exam@debian:~/Sales/Location1$ ls
+sale3  sales  sales1
+exam@debian:~/Sales/Location1$ rm sales
+exam@debian:~/Sales/Location1$ ls
+sale3  sales1
+exam@debian:~/Sales/Location1$ cat > sales3
+Its a sample code
+exam@debian:~/Sales/Location1$ rm sale3
+exam@debian:~/Sales/Location1$ cat > sales2
+This is FISAT
+exam@debian:~/Sales/Location1$ ls
+sales1  sales2  sales3
+exam@debian:~/Sales/Location1$ 
+exam@debian:~/Sales/Location1$ cd ..
+exam@debian:~/Sales$ cd Location2
+exam@debian:~/Sales/Location2$ cat > pur1
+this is good bye!!!!
+exam@debian:~/Sales/Location2$ cat > pur2
+Hello there!!!!
+exam@debian:~/Sales/Location2$ ls
+pur1  pur2
+exam@debian:~/Sales/Location2$ cd ..
+exam@debian:~/Sales$ cd Location3
+exam@debian:~/Sales/Location3$ cat > stock1
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+o
+exam@debian:~/Sales/Location3$ cat > stock2
+He is a good guy
+exam@debian:~/Sales/Location3$ cd ..
+exam@debian:~/Sales$ cd location2
+bash: cd: location2: No such file or directory
+exam@debian:~/Sales$ cd Location2
+
+
+exam@debian:~/Sales/Location2$ cat pur1 pur2 >> pur3
+exam@debian:~/Sales/Location2$ ls
+pur1  pur2  pur3
+exam@debian:~/Sales/Location2$ cat pur3
+this is good bye!!!!
+Hello there!!!!
+
+
+exam@debian:~/Sales/Location2$ cd ..
+exam@debian:~/Sales$ cp Location2/pur3 Location3/stock3
+exam@debian:~/Sales$ cd Location3
+exam@debian:~/Sales/Location3$ ls
+stock1  stock2  stock3
+exam@debian:~/Sales/Location3$ cat stock3
+this is good bye!!!!
+Hello there!!!!
+
+
+exam@debian:~/Sales/Location3$ chmod a+rwx stock3
+exam@debian:~/Sales/Location3$ ls -l
+total 12
+-rw-r--r-- 1 exam exam 26 Oct  8 13:59 stock1
+-rw-r--r-- 1 exam exam 17 Oct  8 14:00 stock2
+-rwxrwxrwx 1 exam exam 37 Oct  8 14:03 stock3
+
+
+
+exam@debian:~/Sales/Location3$ head stock1
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+
+
+exam@debian:~/Sales$ ls -al
+total 20
+drwxr-xr-x  5 exam exam 4096 Oct  8 13:54 .
+drwxr-xr-x 19 exam exam 4096 Oct  8 13:52 ..
+drwxr-xr-x  2 exam exam 4096 Oct  8 13:57 Location1
+drwxr-xr-x  2 exam exam 4096 Oct  8 14:01 Location2
+drwxr-xr-x  2 exam exam 4096 Oct  8 14:03 Location3
+
